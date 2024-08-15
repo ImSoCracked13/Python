@@ -1,0 +1,17 @@
+#draw a triangle
+
+import turtle as t
+
+
+t.pensize(5)
+t.penup()
+t.goto(-200,-100)
+t.pendown()
+t.fillcolor("green")
+t.begin_fill()
+t.goto(200,-100)
+t.goto(0,200)
+t.goto(-200,-100)
+t.end_fill()
+
+t.exitonclick()

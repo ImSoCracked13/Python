@@ -1,0 +1,16 @@
+import turtle as t
+
+def draw_polygon(n_sides, color, pen_width):
+    t.fillcolor(color)
+    t.pensize(pen_width)
+    t.begin_fill()
+    for i in range(n_sides):
+        t.forward(100)
+        t.left(360/n_sides)
+    t.end_fill()
+
+n_sides = int(input('Enter number of sides: '))
+color = input('Enter color to fill: ')
+pen_width = int(input('Enter size of pen: '))
+draw_polygon(n_sides, color, pen_width)
+t.exitonclick()

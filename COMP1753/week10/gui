@@ -1,0 +1,19 @@
+from tkinter import *
+window = Tk()
+window.geometry('256x144')
+window.title = ('Request Maunual Reset')
+
+txtName = Entry(window, width=10)
+txtName.grid (column=0, row=0)
+
+lblReset = Label(window, text='Reset')
+lblReset.grid(column=0, row=1, rowspan=2)
+
+def btnReset_clicked():
+    name = txtName.get()
+    lblReset.configure(text='Reset' + name)
+
+btnReset = Button(window, text='What to Reset?', command=btnReset_clicked)
+btnReset.grid(column=1, row=0)
+
+window.mainloop()

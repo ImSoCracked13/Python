@@ -1,0 +1,27 @@
+norse_gods = ['Thor', 'Loki', 'Odin', 'Baldur', 'Freya']
+n = input('Enter a norse god name: ')
+if n in norse_gods:
+    print(f'Found {n} in norse god name!')
+else:
+    print(f'How could {n} be in this divine realm!')
+
+found = False
+for name in norse_gods:
+    if n == name:
+        found = True
+        break
+if found:
+    print(f'{n} is one of the True One in Norse!')
+else:
+    print(f'{n} in wrong land!')
+
+found = False
+for i in range(len(norse_gods)):
+    if n == name[i]:
+        found = True
+        found_index = i
+        break
+if found:
+    print(f'{n} is in this Asgard land!')
+else:
+    print(f'{n} not identified in Asgard land!')

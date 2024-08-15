@@ -1,0 +1,24 @@
+class Product:
+    def __init__(self):
+        self.name = "Unknown"
+        self.price = 0.0
+        self.stock = 0
+    def show_info(self):
+        print(self.name)
+    def get_value(self):
+        print(self.price)
+        print(self.stock)
+
+gpu = Product("Zotac Gaming RTX 4060Ti 16GB", 499.00, 100)
+cpu = Product("Intel I5 13600K", 239.00, 200)
+ram = Product("Kingston Fury Beast 8x2GB", 79.00, 800)
+mainboard = Product("Asus B660M PLUS", 119.00, 400)
+
+class Store:
+    def __init__(self):
+        self.products = Product[]
+    def add(self, p):
+        for p in self.products:
+            self.products.append()
+            print(f"Product {p} has been added")
+    def remove(self, )

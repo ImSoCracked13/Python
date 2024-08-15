@@ -1,0 +1,18 @@
+movie_name = str(input('Enter the movie name: '))
+adult_ticket_price = float(input('Enter the adult ticket price: '))
+child_ticket_price = float(input('Enter child ticket price: '))
+number_of_adult_tickets_sold = int(input('Enter number of adult tickets sold: '))
+number_of_child_tickets_sold = int(input('Enter number of child tickets sold: '))
+percentage_of_gross_amount_donated = int(input('Enter percentage of gross amount donated: '))
+
+number_of_tickets_sold = number_of_adult_tickets_sold +  number_of_child_tickets_sold
+gross_amount = number_of_child_tickets_sold * child_ticket_price + number_of_adult_tickets_sold * adult_ticket_price
+amount_donate = gross_amount * percentage_of_gross_amount_donated / 100
+net_sale = gross_amount - amount_donate
+
+print('{:<10s}:{:>20s}'. format('Movie name..............................', movie_name))
+print('{:<10s}:{:>20f}'. format('Number of tickets sold..................', number_of_adult_tickets_sold))
+print('{:<10s}:{:>20f}'. format('Gross amount............................', gross_amount))
+print('{:<10s}:{:>20f}%'. format('Percentage of gross amount donated......', percentage_of_gross_amount_donated))
+print('{:<10s}:{:>20f}'. format('Amount donate...........................', amount_donate))
+print('{:<10s}:{:>20f}'. format('Net sale................................', net_sale))

@@ -1,0 +1,19 @@
+
+import turtle as t
+
+t.goto(0,0)
+t.fillcolor("red")
+t.begin_fill()
+t.goto(400,0)
+t.goto(200,300)
+t.end_fill()
+
+t.goto(0,0)
+t.fillcolor("yellow")
+t.begin_fill()
+t.goto(0,-400)
+t.goto(400,-400)
+t.goto(400,0)
+t.end_fill()
+
+t.exitonclick()

@@ -1,0 +1,7 @@
+def solve_quadratic_function (a, b, c):
+    if a == 0:
+        print('Not a quadratic funtion!')
+        return
+    delta = b ** 2  - 4 * a * c
+    if delta < 0:
+        print('No solution.')

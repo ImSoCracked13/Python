@@ -1,0 +1,9 @@
+from random import randint
+name = input('What is your name ? ')
+
+random1 = randint(1,10)
+print('Hello',name,', your lucky number is',random1)
+if random1 == 3 or random1 == 9:
+    print('and you have won the prize')
+elif random1 == 7:
+    print('and you have hit the jackpot')

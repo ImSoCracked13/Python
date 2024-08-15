@@ -1,0 +1,44 @@
+def print_list(items, header=None):
+    if header != None:
+        print(header)
+    for item in items:
+        print(f"{item}")
+    print()
+
+
+
+fruits = ["Banana","Orange","Apple","Mango"]
+
+print_list(fruits, "FRUITS")
+
+fruits.append("Banana") 
+
+print_list(fruits, "FRUITS with an extra Banana")
+
+def is_favourite():
+    favourite = input("What is your favourite fruit? ")
+    if favourite != 'banana'.lower() or \
+       favourite != 'orange'.lower() or \
+       favourite != 'apple'.lower() or \
+       favourite != 'mango'.lower():
+            fruits.insert(0, favourite)
+
+def user_name():
+    name = input(str('What is your name?'))
+    print(f'Hello {name}! Your favourite fruit is {fruits}')
+
+print_list(fruits, "FRUITS, favourite first")
+
+print(f"The list contains {fruits.count('Banana')} Bananas")
+print()
+
+while "Banana" in fruits:
+    fruits.remove("Banana")
+print_list(fruits, "FRUITS with no Bananas")
+
+print(f"The list contains {fruits.count('Banana')} Bananas")
+
+favourite = is_favourite()
+name = user_name()
+print()
+input("Press return to continue ...")

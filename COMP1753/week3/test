@@ -1,0 +1,13 @@
+from msilib.schema import Error
+
+
+a = int(input('Enter a: '))
+b = int(input('Enter b: '))
+if b == 0:
+    print('You have been outragously disappointed the Gods of Mathematics realm, now redeem your pitiful sin.')
+    Error
+Addition = a+b
+Subtraction = a-b
+Multipilication = a*b
+Division = a/b
+print('a + b = {}\n'. format(Addition), 'a - b = {}\n'. format(Subtraction), 'a x b = {}\n'. format(Multipilication), 'a : b = {}'. format(Division))

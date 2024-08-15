@@ -1,0 +1,28 @@
+from light import Light
+from heating import Heating
+from musicplayer import MusicPlayer
+
+def chosen(device, command):
+    if device in command or device.name.lower().replace(" ","") in command:
+        return True
+    else:
+        return False
+
+def init_devices():
+    light = Light()
+    heating = Heating()
+    music_player = MusicPlayer
+    devices = [light, heating, music_player]
+
+    for device in devices:
+        print(f"{device} has been initialized")
+
+    return devices
+
+def init_name():
+    name = input("What is your name? ")
+    print(f"Hello {name}")
+    return name
+
+def control_device(name, device, command):
+

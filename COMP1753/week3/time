@@ -1,0 +1,22 @@
+print('Please Enter to commence the task')
+day = int(input('Enter day of week: '))
+
+if day == 1:
+    print('{} is Sunday'. format(day))
+elif day == 2:
+    print('{} is Monday'. format(day))
+elif day == 3:
+    print('{} is Tuesday'. format(day))
+elif day == 4:
+    print('{} is Wednesday'. format(day))
+elif day == 5:
+    print('{} is Thursday'. foramt(day))
+elif day == 6:
+    print('{} is Friday'. format(day))
+else:
+    print('{} is Saturaday', format(day))
+
+
+
+
+

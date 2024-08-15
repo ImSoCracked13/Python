@@ -1,0 +1,23 @@
+import turtle as t
+
+def draw_polygon(n_sides, color, pen_width):
+        t.fillcolor(color)
+        t.pensize(pen_width)
+        t.begin_fill()
+        for i in range(n_sides):
+            t.forward(100)
+            t.left(360/n_sides)
+        t.end_fill()
+
+
+def draw_polygons(n_polygons, n_sides, color, pen_width):
+        angle = 360 / n_polygons
+        for n in range (n_polygons):
+            draw_polygon(n_sides, color, pen_width)
+            t.left(angle)
+t.speed(200)
+
+
+draw_polygons(12, 6, 'pink', 4)
+t.exitonclick()
+

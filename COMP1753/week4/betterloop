@@ -1,0 +1,6 @@
+valid_input = False
+while not valid_input:
+    number = int(input('Enter a positive number: '))
+    valid_input = number > 0
+    if not valid_input:
+        print('The number must be always positive!')

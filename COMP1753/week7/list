@@ -1,0 +1,12 @@
+numbers = [1, 2, 3, 5, 7, 22, 56, 49]
+print(numbers, len(numbers), sep='\n')
+
+guns = ['AK-47', 'M4A1-S', 'AWP', 'Scout', 'SG553']
+print(guns)
+print(guns[0], guns[-5])
+print(guns[4], guns[-1])
+
+empty_list = []
+print(empty_list)
+cups_size = ['H'] * 10
+print(cups_size)

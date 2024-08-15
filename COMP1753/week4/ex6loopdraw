@@ -1,0 +1,12 @@
+import turtle as t
+n = int(input('Enter Number: '))
+
+t.goto(0,0)
+for i in range(3):
+    t.forward(100)
+    t.penup()
+    t.goto(0,0)
+    t.pendown()
+    t.left(360/n)
+
+t.exitonclick()

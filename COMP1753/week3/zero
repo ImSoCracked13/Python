@@ -1,0 +1,14 @@
+n = int(input('Enter a number: '))
+if n > 0:
+    print('{} is positive', format(n))
+if n <= 0:
+    print('{} is negative', format(n))
+else:
+    print('{} is remain as 0', format(n))
+
+
+
+
+
+
+

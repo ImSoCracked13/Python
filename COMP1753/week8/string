@@ -1,0 +1,38 @@
+random_number = 1.35792468
+
+print("|{:^20.4f}|".format(random_number))
+print("|{:<20.4e}|".format(random_number))
+print("|{:>20.4%}|".format(random_number))
+
+ye = "yesn't"
+print(ye.lower())
+print(ye.upper())
+print(ye.title())
+print(ye.swapcase())
+print(f'|{ye}|')
+print(f'|{ye.strip()}|')
+print(f'|{ye.rstrip()}|')
+print(f'|{ye.lstrip()}|')
+
+
+
+streamer_name = input('Enter your streamer name: ')
+name = ' '.join(streamer_name.strip().split())
+print(f'|{streamer_name}|')
+
+vgc_names = ['Leon Kennedy', 'Ada Wong', 'Claire Redfield', 'Sherry Birkins', 'Ethan Winters']
+print(len(vgc_names))
+print('Longest Video Game Character Name: ', max(vgc_names, key=len))
+print('Shortest Video Game Character Name: ', min(vgc_names ,key=len))
+
+human1 = 'homo'
+human2 = 'sapiens'
+print(human1 + human2)
+human = 'homo sapiens'
+print(human * 10)
+if 'homo' in human:
+    print('Good')
+elif 'sapiens in human':
+    print('Good')
+else:
+    print('Bad')

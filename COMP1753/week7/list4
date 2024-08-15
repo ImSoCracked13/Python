@@ -1,0 +1,28 @@
+brand_sellers = ['NVDIA GeForce', 'AMD', 'Intel', 'Corsair', 'Razer']
+products = ['RTX 4080', 'RX 6900XT', 'Arc A770', 'HS50 Stereo', 'Huntsman V2']
+prices = [1000, 900, 700, 500, 400]
+n_sells = [10, 20, 30, 35, 25]
+
+
+count = 0
+for i in range(len(brand_sellers)):
+    if prices[i] * n_sells[i] > 18000:
+        print(f'{brand_sellers[i]} sold {products[i]}, earns ${n_sells[i] * prices[i]}!')
+        count += 1
+
+if count == 0:
+    print('No such brand reach revenue up to $18000!')
+
+max_earn = n_sells[0] * prices[0]
+min_earn = n_sells[0] * prices[0]
+best_seller = brand_sellers[0]
+for i in range (len(brand_sellers)):
+    earn = n_sells[i] * prices[i]
+    if earn > max_earn:
+        max_earn = earn
+        best_seller = brand_sellers[i]
+print(f'{best_seller}')
+
+
+
+    

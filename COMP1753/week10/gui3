@@ -1,0 +1,52 @@
+from tkinter import *
+
+window = Tk()
+window.geometry('256x144')
+window.title('Demo Checkboxes')
+
+def calculate_payment():
+    payment = 0
+    if nordic_selected.get() == True:
+        payment += 200
+    if celtic_selected.get() == True:
+        payment += 150
+    if student_type.get() == 1:
+        payment -= 50
+    lblPayment.configure(text='Payment: $' + str(payment))
+
+def chkNordic_clicked():
+    calculate_payment()
+
+def chkCeltic_clicked():
+    calculate_payment()
+
+
+lblLanguages = Label(window, text='Select Language Courses')
+lblLanguages.grid(column=0, row=0)
+
+nordic_selected = BooleanVar()
+nordic_selected.set(False)
+chkNordic = Checkbutton(window, text="Nordic ($200)", var=nordic_selected, command=chkNordic_clicked)
+chkNordic.grid(column=0, row=1)
+
+celtic_selected = BooleanVar()
+celtic_selected.set(False)
+chkCeltic = Checkbutton(window, text="Celtic ($150)", var=celtic_selected, command=chkCeltic_clicked)
+chkCeltic.grid(column=0, row=2)
+
+lblStudentType = Label(window, text='Select Student Type')
+lblStudentType.grid(column=0, row=3)
+
+student_type = IntVar()
+student_type.set(0)
+
+radNewStudent = Radiobutton(window, text='New Student', variable=student_type, value=0)
+radNewStudent.grid(column=0, row=4)
+
+radOldStudent = Radiobutton(window, text='Old Student', variable=student_type, value=1)
+radOldStudent.grid(column=0, row=5)
+
+lblPayment = Label(window, text='Payment: $0')
+lblPayment.grid(column=0, row=6)
+
+window.mainloop()

@@ -1,0 +1,5 @@
+
+mt = int(input('Enter a number: '))
+
+for i in range(1, mt+1):
+    print(f'{mt} x {i} = {mt*i}')

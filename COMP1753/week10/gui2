@@ -1,0 +1,63 @@
+from tkinter import *
+
+window = Tk()
+window.geometry('256x144')
+window.title('Math Operator')
+
+lblA = Label(window, text='A')
+lblA.grid(column=0, row=0)
+txtA=Entry(window, width=10)
+txtA.grid(column=1, row=0, columnspan=4)
+
+lblB = Label(window, text='B')
+lblB.grid(column=0, row=1)
+txtB = Entry(window, width=10)
+txtB.grid(column=1, row=1, columnspan=4)
+
+def perform(operation):
+    a = int(txtA.get()) if txtA.get() != '' else 0
+    b = int(txtB.get()) if txtB.get() != '' else 0
+    if operation == '+':
+        result = a + b
+    elif operation =='-':
+        result = a - b
+    elif operation == 'x':
+        result = a * b
+    elif operation == '/':
+        result = a / b
+    txtResult.delete(0, END)
+    txtResult.insert(0, str(result))
+
+
+def btnAdd_clicked():
+    perform('+')
+
+def btnSub_clicked():
+    perform('-')
+
+def btnMul_clicked():
+    perform('x')
+
+def btnDiv_clicked():
+    try:
+        perform('/')
+    except ZeroDivisionError:
+        print('Math Error! Cannot Divide by zero!')
+
+btnAdd = Button(window, text='+', command= btnAdd_clicked)
+btnAdd.grid(column=1, row=2)
+btnSub = Button(window, text='-')
+btnSub.grid(column=2, row=2)
+btnMul = Button(window, text='x')
+btnMul.grid(column=3, row=2)
+btnDiv = Button(window, text='/')
+btnDiv.grid(column=4, row=2)
+
+lblResult = Label(window, text='')
+lblResult.grid(column=0, row=3)
+txtResult = Entry(window, width=10, state='readonly')
+txtResult.grid(column=1, row=3, columnspan=4)
+
+
+
+window.mainloop()

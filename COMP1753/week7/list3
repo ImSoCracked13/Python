@@ -1,0 +1,11 @@
+greek_gods = ['Zeus', 'Ares', 'Kratos', 'Athena', 'Poseidon', 'Hades', 'Helios', 'Aphrodite']
+grades = [10, 9, 8, 7, 7, 8, 9, 10]
+
+count = 0
+for i in range(len(greek_gods)):
+    if grades[i] == 10:
+        print(f'{greek_gods[i]}: {grades[i]}')
+        count += 1
+
+if count == 0:
+    print('No student has grade = 10!')

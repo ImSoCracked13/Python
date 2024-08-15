@@ -1,0 +1,9 @@
+
+s = int(input('How many numberic letters you want to appear?'))
+
+
+for i in range(1, s+1):
+    for j in range(s - i + 1):
+        print(i, end='')
+    print()
+

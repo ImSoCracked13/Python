@@ -1,0 +1,20 @@
+name = str(input('Enter your name: '))
+grade = int(input('Enter your grade: '))
+if grade > 100:
+    print('{} ranked as S-tier'. format(name))
+elif grade >= 80:
+    print('{} ranked as A-tier'. format(name))
+elif grade >= 60:
+    print('{} ranked as B-tier'. format(name))
+elif grade >= 40:
+    print('{} ranked as C-tier'. format(name))
+else:
+    print('{} ranked as D-tier/Failure'. format(name))
+
+
+
+
+
+
+
+

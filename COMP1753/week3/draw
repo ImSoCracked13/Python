@@ -1,0 +1,20 @@
+import turtle as t
+shape = input('What do you want to draw?')
+if shape == "triangle":
+    t.forward(100)
+    t.left(120)
+    t.forward(100)
+    t.left(120)
+    t.forward(100)
+    t.left(120)
+    t.forward(100)
+    t.exitonclick()
+elif shape == "square":
+    t.forward(100)
+    t.left(90)
+    t.forward(100)
+    t.left(90)
+    t.forward(100)
+    t.left(90)
+    t.forward(100)
+    t.exitonclick()

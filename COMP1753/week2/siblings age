@@ -1,0 +1,23 @@
+
+younger_brother_name = input('Younger brother name is: ')
+younger_brother_age = int(input('Younger brother age is: '))
+
+older_brother_name = input('Older brother name is: ')
+older_brother_age = int(input('Older brother age is: '))
+
+print('Younger brother name is', younger_brother_age, 'Younger brother age is', younger_brother_age)
+print('Older brother name is', older_brother_name, 'Older brother age is', older_brother_age)
+
+age_difference = older_brother_age - younger_brother_age
+print('The age differnce between', younger_brother_name, 'and', older_brother_name, 'is', age_difference)
+
+
+
+
+
+
+
+
+
+
+dd

@@ -1,0 +1,31 @@
+from light import Light
+from heating import Heating
+from musicplayer import MusicPlayer
+
+
+light01 = Light()
+
+print(light01.name)
+print(light01.type)
+print(light01.level)
+print(light01.status)
+
+light01.turn_on()
+light01.increase()
+
+heating01 = Heating()
+
+print(heating01.name)
+print(heating01.type)
+print(heating01.level)
+print(heating01.status)
+
+heating01.turn_on()
+heating01.increase()
+
+music_player01 = MusicPlayer
+
+print(music_player01.name)
+print(music_player01.type)
+print(music_player01.level)
+print(music_player01.status)

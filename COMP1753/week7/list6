@@ -1,0 +1,30 @@
+sins = ['Wrath', 'Sloth', 'Greed', 'Gluttony', 'Lust', 'Envy', 'Pride']
+sorted_sins = list(sorted(sins))
+print(sins)
+print(sorted_sins)
+sins.sort()
+print(sins)
+
+sins.reverse()
+print(sins)
+sins.insert(2, 'Vain')
+print(sins)
+
+print(sins[2:5])
+print(sins[:3])
+print(sins[5:])
+print(sins[-2:])
+
+print(sins[::-1])
+m = len(sins) // 2
+print(sins[:m:-1])
+
+name = input('Enter sins to remove: ')
+if name in sins:
+    sins.remove(name)
+    print(sins)
+else:
+    print('Sins not found!')
+
+symbol = ['!', '$', '!', '!']
+print('Number of Exclaimation Marks: '.count('!'))

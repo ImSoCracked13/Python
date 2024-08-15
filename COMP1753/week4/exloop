@@ -1,0 +1,7 @@
+s = 0
+n = int(input('Enter a number: '))
+while n > 0:
+    if n % 2 == 0:
+        s = s + 1
+    n = int(input('Enter a number: '))
+print('Amount of entered even positive number is', s)

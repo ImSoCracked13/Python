@@ -1,0 +1,52 @@
+MONSTER_PREMIUM_PRICE = 5
+MUTANT_PREMIUM_PRICE = 4
+CANNED_STARBUCKS_PRICE = 3
+
+
+def print_drinks():
+    print("Welcome to templar's vedding machine! Today drink menu is:")
+    print('{:<20}: ${:>0}'.format('Monster Premium', 5))
+    print('{:<20}: ${:>0}'.format('Mutant Premium', 4))
+    print('{:<20}: ${:>0}'.format('Canned Starbucks', 3))
+
+
+
+def get_choice():
+    choice = int(input('Your choice: '))
+    while choice < 1 or choice > 3:
+        print('You cannot do this!')
+        break
+    return choice
+
+
+def n_drinks():
+    drinks = int(input('Pick one: '))
+    while drinks < 1:
+        print('Only 3 of these!')
+        break
+    return drinks
+
+
+def cal_payment(choice, n_drinks):
+    if choice == MONSTER_PREMIUM_PRICE:
+        payment = MONSTER_PREMIUM_PRICE * n_drinks
+    elif choice == MUTANT_PREMIUM_PRICE:
+        payment = MUTANT_PREMIUM_PRICE * n_drinks
+    elif choice == CANNED_STARBUCKS_PRICE:
+        payment = CANNED_STARBUCKS_PRICE * n_drinks
+    return payment
+
+
+def pay(payment):
+    print('You need to pay around: ')
+    amount = int(input('Insert Money: '))
+    change = amount - payment
+    if change > 0:
+        print(f'Here is your change: ${change}')
+
+
+print_drinks()
+choice = get_choice()
+drinks = n_drinks()
+payment = cal_payment()
+pay()

@@ -1,0 +1,24 @@
+import random
+length = 0
+while True:
+    strength = int(input("Strength [0 to terminate]?"))
+    if strength == 0:
+        break
+    if strength > 10:
+        length = 20
+    else:
+        length = strength*2
+letters = "abcdefghijklmnopqrstuvwyz"
+characters = letters
+punctuation = "\',-\....!?"
+if strength >= 2:
+    characters += letters.upper()
+elif strength >= 5:
+    characters += "0123456789"
+if strength >= 7:
+    characters += punctuation
+password = ""
+for i in range(length):
+    r = random.randint(0, len(characters)-1)
+    password += characters[r]
+print(f"Your password is {password}")
